@@ -1,0 +1,12 @@
+<!--10.3お気に入りボタン-->
+<% if current_user.be_liked?(micropost) %>
+  <%= form_for(current_user.favolites.find_by(micropost_id: micropost.id), html: {method: :delete}) do |f| %>
+    <%= hidden_field_tag :micropost_id, micropost.id %>
+    <%= f.submit 'Dislike', class: 'btn btn-danger btn-block' %>
+  <% end %>
+<% else %>
+  <%= form_for(current_user.favolites.build) do |f| %>
+    <%= hidden_field_tag :micropost_id, micropost.id %>
+    <%= f.submit 'Like', class: 'btn btn-primary btn-block' %>
+  <% end %>
+<% end %>  

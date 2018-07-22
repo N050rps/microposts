@@ -1,0 +1,10 @@
+お気に入りの一覧表示
+
+app/controllers/application_controller.rb
+（お気に入りのカウント）
+app/controllers/users_controller.rb
+(defの中身)
+app/views/users/favolite_microposts.html.erb
+<h3>の@user
+<img>の中の@user
+<%= render>の中
